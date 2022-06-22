@@ -1,0 +1,285 @@
+/***** RESET *****/
+html,body,div,span,applet,object,iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+/*font-size: 100%;
+vertical-align: baseline;*/
+}
+html, body {height:100% ;}
+body {line-height: 1;}
+ol,ul {list-style: none;}
+blockquote, q {quotes:none}
+blockquote:before, blockquote::after, q::after {content: ""; content: none;}
+table {border-collapse:collapse; border-spacing: 0;} 
+textarea {overflow:auto; } 
+
+/***** RESET *****/
+
+
+
+.menu {
+    width:90% ;
+    height: 85px;
+    background-color:#231f20;
+    border: 1px solid black;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+
+
+.logo img {
+    width: 150px;
+    height: 86px;
+}
+
+
+
+.menu > ul > li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 25px;
+    margin: 5px;
+}
+
+.menu > ul > li > a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    padding: 10px;
+    font-family: 'Righteous';
+    transition: 0.8s;
+}
+
+.menu  li:hover a{
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+}
+
+.menu > ul > li > ul {
+    position: absolute;
+    left: 20;
+    background: black;
+    width: 10%;
+    top: 90px;
+    transition:all 600ms;
+    opacity: 0;
+    box-shadow: 0 5px 5px rgb(0, 0, 0);
+    visibility: hidden;
+    border-radius: 4px;
+    border-bottom: 1px solid white;
+    padding: 10px 0px;
+   }
+   
+   .menu > ul > li >ul::before {
+       content: "";
+       border-bottom: 10px solid red;
+       border-top: 4px solid transparent;
+       border-left: 10px solid transparent;
+       border-right: 10px solid transparent;
+       position: absolute;
+       top: -1px;
+       left: 24%;
+       right: 40%;
+       transform: translate(-260);
+   }
+   .menu > ul > li > ul > li {
+       list-style:none ;
+   
+   }
+   
+   .menu > ul > li > ul > li > a {
+       text-decoration: none;
+       color: white;
+       font-size: 10;
+       display: block;
+       padding: 15px 15px;
+       font-family: "Righteous";
+   }
+   
+   .menu > ul > li > ul > li > a:hover {
+      background: rgb(253, 253, 253);
+      opacity: 0.9;
+   }
+   
+   .menu > ul > li:hover > ul{
+       opacity: 1;
+       visibility: visible;
+       top: 9% ;
+   }
+
+   .menu .i {display: none;}
+
+
+   /* Galeri Alanı */
+
+   .galeri {
+       background: url(images/galeri1.png);
+       width: 90%;
+       height: 50vh;
+       margin: 10px auto;
+       background-position: center;
+       background-size: cover;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+   }
+
+   .galeri > .web {
+       color: rgb(255, 255, 255);
+       font-family: 'Cinzel';
+       font-size: 30px;
+       padding: 20px;
+       
+   }
+
+   .galeri a{
+       font-family:'Cinzel';
+       color: white;
+       font-size: 20px;
+       padding: 10px 30px;
+       text-decoration: none;
+       box-sizing: border-box;
+       border:1px solid white;
+       background-color: rgba(255,255,255,0.3);
+       transition: 0,5;
+    }
+
+   .galeri a:hover{
+       color: #000000;
+       background-color: white;
+       padding: 10px 20px;
+   }
+
+   .web h4{
+       border-bottom: 1px solid white;
+       padding-bottom: 20px;
+   }
+
+   /* Orta ALAN */
+
+   .orta_alan {
+       display: flex;
+       width: 90%;
+       height: vh ;
+       justify-content: space-around;
+
+   }
+   .orta {
+       width: 22%;
+       height: 60%;
+       border: 2px solid gray;
+       border-radius: 15px;
+       margin: 2% ;
+       margin-left: 10%;
+       box-sizing: border-box;
+       background:rgb(241, 241, 241);
+    
+
+   }
+
+   .orta_alan .orta .icerik {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+       flex-direction: column;
+       padding: 10px;
+       text-align: justify;
+       font-family: 'Cinzel';
+       color: rgb(0, 0, 0);
+   }
+
+   .orta p{text-indent: 15px;}
+   .orta img{width: 50%;}
+
+   .orta .icerik img{
+       width: 250px;
+   }
+
+   /*ALT ALAN KODLARI */
+
+   .alt_alan {
+       display: flex;
+       flex-wrap: wrap;
+       width: 90%;
+       height: 40vh;
+       margin-left: 5%;
+       background-color: #171717;
+       color: white;
+   }
+
+   .alt_alan .icerik {
+       width: 33%;
+       padding: 20px;
+       box-sizing: border-box;
+       text-align: justify;
+       font-family: 'Cinzel';
+       
+   }
+
+   .alt_alan .sosyal{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 100%;
+       font-size: 40px;
+       border-top: 5px solid white;
+   }
+
+   .alt_alan i{margin:20px}
+   .alt_alan a{color: white;}
+   .sosyal a:nth-child(1):hover {color: blue;}
+   .sosyal a:nth-child(2):hover {color: rgb(71, 144, 179);}
+   .sosyal a:nth-child(3):hover {color: rgb(231, 81, 43);}
+
+
+   /*tablet Görünüm Kodu*/
+
+   @media only screen and (max-width: 992px) 
+   {
+
+    .orta_alan { flex-wrap:wrap;}
+       .orta {width: 48%;}
+       .orta img{width: 30%;}
+    }
+
+
+/*Cep Telefonu Görünüm Kodu*/
+
+   @media only screen and (max-width: 768px){
+   /* Menu Responsive Kodlar*/
+    .menu{justify-content: space-between;} 
+    .menu .logo {margin-left: 10%;}
+    .menu {margin-right: 10%;}  
+    .menu ul{display: none;}
+       .menu .i{display: block;
+       cursor: pointer;
+       color: white;
+       font-size: 40px;
+       border: 1px solid white;
+       padding: 5px;
+       border-radius: 15%;
+       margin-top: 50%;
+    }
+
+    .orta{width: 100%;}
+    .orta .icerik {flex-direction: row;}
+    .icerik img, h3, p{padding: 1%;}
+
+    /*Alt Alan Responsive */
+    .alt_alan {height: 80vh;}
+    .alt_alan .icerik{
+    display:flex ;
+    width:100%;
+    
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;}
